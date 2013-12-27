@@ -1,8 +1,8 @@
 \documentclass{article}
 \usepackage{cctexexample}
 
-\title{}
-\author{}
+\title{\LaTeX{} font guide}
+\author{Carleton College \LaTeX{} workshop}
 \date{}
 
 \newcommand*{\code}[1]{\texttt{#1}}
@@ -12,4 +12,25 @@
 \begin{document}
 \maketitle
 
+\LaTeX{} interacts with fonts differently than most software you are accustomed to.
+It does not natively support using system fonts; you can't just choose Comic Sans from a drop-down menu and use it in your document.
+(This is probably for the best.)
+
+Nevertheless, \LaTeX{} does support a variety of fonts.
+This document will showcase a few that are of high quality and have excellent math support.
+
+\section{Using a font in your document}
+To use one of these fonts in a document using one of the Carleton templates, go to the preamble and look for these lines:
+\begin{verbatim}
+% The Latin Modern font is a modernized replacement for the classic
+% Computer Modern. Feel free to replace this with a different font package.
+\usepackage{lmodern}
+\end{verbatim}
+To switch to a different font package, just \emph{replace} \code{lmodern} with the name of that package.
+(It is very important not to load multiple font packages; they can conflict and cause strange behavior.)
+
+For example, to us the \code{kpfonts} package, you should replace the third line of the above with the following:
+\begin{verbatim}
+\usepackage{kpfonts}
+\end{verbatim}
 \end{document}
